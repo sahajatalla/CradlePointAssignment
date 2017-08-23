@@ -151,7 +151,7 @@ public:
 
 	int run_client_multiple(char *host)
 	{
-		unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+		unsigned seed = static_cast<unsigned int> (std::chrono::system_clock::now().time_since_epoch().count());
 		std::default_random_engine generator(seed);
 
 		std::uniform_int_distribution<int> distribution(1, 1000);

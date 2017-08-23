@@ -22,7 +22,8 @@ using namespace std;
 
 ctpl::thread_pool p(10/* two threads in the pool */);
 
-bool __declspec(dllexport)  isPrime(int n)
+// helper to compute the primality of an unsigned number.
+bool __declspec(dllexport)  isPrime(unsigned int n)
 {
 	// Corner cases
 	if (n <= 1)  return false;
@@ -31,14 +32,15 @@ bool __declspec(dllexport)  isPrime(int n)
 	// With this check we can skip middle five numbers in below loop
 	if (n % 2 == 0 || n % 3 == 0) return false;
 
-	for (int i = 5; i*i <= n; i = i + 6)
+	for (unsigned int i = 5; i*i <= n; i = i + 6)
 		if (n%i == 0 || n % (i + 2) == 0)
 			return false;
 
 	return true;
 }
 
-void find_primality_send_result(int id, int num, SOCKET ClientSocket)
+// Computes the primality of the number and writes the result back to the client(socket).
+void find_primality_send_result(int id, unsigned num, SOCKET ClientSocket)
 {
 	//bool result = do_is_prime(id, num);
 	bool result = isPrime(num);
@@ -68,14 +70,16 @@ void find_primality_send_result(int id, int num, SOCKET ClientSocket)
 
 }
 
-void assign_task(int num_for_primality_test, SOCKET client_socket)
+// Assigns the task of computing the primality to the thread pool
+void assign_task(unsigned int num_for_primality_test, SOCKET client_socket)
 {
 	p.push(find_primality_send_result, num_for_primality_test, client_socket);  // function
 }
 
+// read the unsigned prime number from the client socket and call assign_task
 void get_client_data_assign_task_tp(SOCKET ClientSocket)
 {
-	int MyInt;
+	unsigned MyInt;
 	unsigned NetInt;
 
 	int iResult = recv(ClientSocket, (char *)&NetInt, sizeof(long), 0);

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 int __declspec(dllimport) start_server();
-bool __declspec(dllimport)  isPrime(int n);
+bool __declspec(dllimport)  isPrime(unsigned int n);
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTest_Server
