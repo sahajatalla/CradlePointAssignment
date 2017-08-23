@@ -16,51 +16,71 @@ Open the Visual Studio (I used visual studio 2015) solution file called client.s
 The unit tests can be run from the Visual Studio when the solution is open; I only added few unit tests and more should be added.  To add more tests and hence more coverage, it is good idea to come up with smaller functions.
 
 ## Sample Output - Server window
+C:\Users\sahaja2016\cp\git_test_getting\CradlePointAssignment\Debug>server.exe
+Number received: 81
+thread id is  : 0 socket is : 160 : 0, num is 81
+Bytes sent: 5
+Number received: 685
+thread id is  : 1 socket is : 160 : 1, num is 685
+Bytes sent: 5
+Number received: 135
+thread id is  : 2 socket is : 160 : 2, num is 135
+Bytes sent: 5
+Number received: 96
+thread id is  : 3 socket is : 160 : 3, num is 96
+Bytes sent: 5
+Number received: 208
+thread id is  : 4 socket is : 160 : 4, num is 208
+Bytes sent: 5
+Number received: 34
+thread id is  : 5 socket is : 160 : 5, num is 34
+Bytes sent: 5
+Number received: 10
+thread id is  : 6 socket is : 160 : 6, num is 10
+Bytes sent: 5
+Number received: 267
+thread id is  : 7 socket is : 160 : 7, num is 267
+Bytes sent: 5
+Number received: 705
+thread id is  : 8 socket is : 160 : 8, num is 705
+Bytes sent: 5
+Number received: 987
+thread id is  : 9 socket is : 160 : 9, num is 987
+Bytes sent: 5
 
-C:\Users\sahaja2016\cp\git_test_getting\CradlePointAssignment\Debug>server
-Number received: 914
-thread id is   socket is 160 : 0, num is 914Bytes sent: 5
-Number received: 170
-thread id is   socket is 160 : 1, num is 170Bytes sent: 5
-Number received: 560
-thread id is   socket is 160 : 2, num is 560Bytes sent: 5
-Number received: 744
-thread id is   socket is 160 : 3, num is 744Bytes sent: 5
-Number received: 402
-thread id is   socket is 160 : 4, num is 402Bytes sent: 5
-Number received: 419
-thread id is   socket is 160 : 5, num is 419Bytes sent: 4
-Number received: 344
-thread id is   socket is 160 : 6, num is 344Bytes sent: 5
-Number received: 602
-thread id is   socket is 160 : 7, num is 602Bytes sent: 5
-Number received: 3
-thread id is   socket is 160 : 8, num is 3Bytes sent: 4
-Number received: 533
-thread id is   socket is 160 : 9, num is 533Bytes sent: 5
 
 ## Sample Output - Client window
 
-C:\Users\sahaja2016\cp\git_test_getting\CradlePointAssignment\Debug>client local
+C:\Users\sahaja2016\cp\git_test_getting\CradlePointAssignment\Debug>client
 host
-some random numbers between 1 and 10: Bytes Sent: 4
-Socket is 288 : Primality of  914  is  false
+Bytes Sent: 4
+Socket is 288 : Primality of  81  is  false
 Connection closed
 Bytes Sent: 4
-Socket is 288 : Primality of  170  is  false
+Socket is 288 : Primality of  685  is  false
 Connection closed
 Bytes Sent: 4
-Socket is 288 : Primality of  560  is  false
+Socket is 288 : Primality of  135  is  false
 Connection closed
 Bytes Sent: 4
-Socket is 288 : Primality of  744  is  false
+Socket is 288 : Primality of  96  is  false
 Connection closed
 Bytes Sent: 4
-Socket is 288 : Primality of  402  is  false
+Socket is 288 : Primality of  208  is  false
 Connection closed
 Bytes Sent: 4
-Socket is 288 : Primality of  419  is  true
+Socket is 288 : Primality of  34  is  false
 Connection closed
 Bytes Sent: 4
-Socket is 288 : Primality of  344  is  false
-
+Socket is 288 : Primality of  10  is  false
+Connection closed
+Bytes Sent: 4
+Socket is 288 : Primality of  267  is  false
+Connection closed
+Bytes Sent: 4
+Socket is 288 : Primality of  705  is  false
+Connection closed
+Bytes Sent: 4
+Socket is 288 : Primality of  987  is  false
+Connection closed
+604
