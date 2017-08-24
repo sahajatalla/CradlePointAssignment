@@ -16,6 +16,7 @@ Open the Visual Studio (I used visual studio 2015) solution file called client.s
 The unit tests can be run from the Visual Studio when the solution is open; I only added few unit tests and more should be added.  To add more tests and hence more coverage, it is good idea to come up with smaller functions.
 
 ## Sample Output - Server window
+
 C:\Users\sahaja2016\cp\git_test_getting\CradlePointAssignment\Debug>server.exe
 Number received: 81
 thread id is  : 0 socket is : 160 : 0, num is 81
@@ -47,6 +48,7 @@ Bytes sent: 5
 Number received: 987
 thread id is  : 9 socket is : 160 : 9, num is 987
 Bytes sent: 5
+
 
 
 ## Sample Output - Client window
