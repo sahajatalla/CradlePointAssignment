@@ -29,7 +29,7 @@ private:
 public:
 	client()
 	{
-		rand_range_from = 0;
+		rand_range_from = 1;
 		rand_range_to = 1000;
 	}
 	
@@ -154,9 +154,8 @@ public:
 		unsigned seed = static_cast<unsigned int> (std::chrono::system_clock::now().time_since_epoch().count());
 		std::default_random_engine generator(seed);
 
-		std::uniform_int_distribution<int> distribution(1, 1000);
+		std::uniform_int_distribution<int> distribution(rand_range_from, rand_range_to);
 
-		std::cout << "some random numbers between 1 and 10: ";
 		for (int i = 0; i < 10; ++i)
 		{
 			if (connect_send_receive_result(host, distribution(generator)) != 0)
