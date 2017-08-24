@@ -2,7 +2,7 @@
 
 Currently I created client and the server.  I wrote a small test program which exercises the following in a for loop:  Generates a random number, instantiates the client, makes the connection with the server, sends the unsigned number, gets the result of its primality and prints it.  This is the simulation of multiple clients interacting with the server.
 
-The server gets connection request from the client, accepts the connection, gets the unsigned number whose primality is to be determined and assigns the task of determining the primality of the number to a task in the thread pool.  This task computes the primality of the number, and writes back the result to the client socket.
+The server gets connection request from the client, accepts the connection, gets the unsigned number whose primality is to be determined and assigns the task of determining the primality of the number to a task in the thread pool.  This task computes the primality of the number, and writes back the result to the client socket.  Initially, I thought about adding a blocking queue with producer consumer design pattern in mind, but later realized that is not needed because it is already built into the thread pool functionality I am using.  The routine to determine the primality of the number is optimized for the speed.
 
 ## How to build
 
